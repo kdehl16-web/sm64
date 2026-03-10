@@ -1,3 +1,5 @@
+name: Build and Release
+
 on:
   workflow_dispatch:
   push:
@@ -34,6 +36,30 @@ jobs:
 
     - name: Run the Docker image
       run: docker run --rm --mount type=bind,source="$(pwd)",destination=/sm64 sm64 bash makecontinuous.sh ${{github.event.repository.name}} ${{github.ref_name}}
+
+    # --- ファイルサイズチェック ステップ ---
+    - name: Validate build artifacts
+      run: |
+        FILES=(
+          "${{github.event.repository.name}}-${{github.ref_name}}.bps"
+          "${{github.event.repository.name}}-${{github.ref_name}}-hle.bps"
+        )
+        
+        THRESHOLD=1024 # 1KB
+        
+        for FILE in "${FILES[@]}"; do
+          if [ ! -f "$FILE" ]; then
+            echo "::error::File not found: $FILE"
+            exit 1
+          fi
+          
+          SIZE=$(stat -c%s "$FILE")
+          if [ "$SIZE" -lt "$THRESHOLD" ]; then
+            echo "::error::Build artifact $FILE is too small ($SIZE bytes). Expected at least ${THRESHOLD} bytes."
+            exit 1
+          fi
+          echo "Success: $FILE is $SIZE bytes."
+        done
 
     - name: Push build to GitHub releases
       uses: docker://ghcr.io/mini-bomba/create-github-release:main
