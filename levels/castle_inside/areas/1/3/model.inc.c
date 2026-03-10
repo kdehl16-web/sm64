@@ -74,6 +74,33 @@ static const Vtx inside_castle_seg7_vertex_07029348[] = {
     {{{ -1424,    614,   -429}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
+Vtx stair_sm64_mesh_003_mesh_vtx_0[24] = {
+	{{{-1228, 358, -116},0, {974, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-1417, 256, -303},0, {-982, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-1228, 256, -116},0, {974, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-1417, 358, -303},0, {-982, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-1228, 358, -116},0, {-16, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-1125, 256, -116},0, {974, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-1125, 358, -116},0, {974, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-1228, 256, -116},0, {-16, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-1417, 256, -303},0, {-16, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-1417, 358, -398},0, {974, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-1417, 256, -398},0, {974, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-1417, 358, -303},0, {-16, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-629, 358, -303},0, {974, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-818, 256, -116},0, {-982, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-629, 256, -303},0, {974, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-818, 358, -116},0, {-982, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-818, 256, -116},0, {-16, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-913, 358, -116},0, {974, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-913, 256, -116},0, {974, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-818, 358, -116},0, {-16, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-629, 358, -303},0, {974, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-629, 256, -398},0, {-16, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-629, 358, -398},0, {-16, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-629, 256, -303},0, {974, 974},{0xff, 0xff, 0xff, 0xff}}},
+};
+
 // 0x07029438 - 0x07029578
 static const Gfx inside_castle_seg7_dl_07029438[] = {
     gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, inside_09008800),
@@ -100,6 +127,20 @@ static const Gfx inside_castle_seg7_dl_07029438[] = {
     gsSP2Triangles( 5,  8,  6, 0x0,  5,  9,  8, 0x0),
     gsSP2Triangles( 9, 10,  8, 0x0,  9, 11, 10, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
+	gsSPVertex(stair_sm64_mesh_003_mesh_vtx_0 + 0, 16, 0),
+	gsSP1Triangle(0, 1, 2, 0),
+	gsSP1Triangle(0, 3, 1, 0),
+	gsSP1Triangle(4, 5, 6, 0),
+	gsSP1Triangle(5, 4, 7, 0),
+	gsSP1Triangle(8, 9, 10, 0),
+	gsSP1Triangle(9, 8, 11, 0),
+	gsSP1Triangle(12, 13, 14, 0),
+	gsSP1Triangle(12, 15, 13, 0),
+	gsSPVertex(stair_sm64_mesh_003_mesh_vtx_0 + 16, 8, 0),
+	gsSP1Triangle(0, 1, 2, 0),
+	gsSP1Triangle(1, 0, 3, 0),
+	gsSP1Triangle(4, 5, 6, 0),
+	gsSP1Triangle(5, 4, 7, 0),
     gsSPEndDisplayList(),
 };
 

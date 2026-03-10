@@ -225,7 +225,7 @@ static const Gfx inside_castle_seg7_dl_07043930[] = {
     gsSPEndDisplayList(),
 };
 
-// 0x07043988 - 0x070439C0
+/* 0x07043988 - 0x070439C0
 static const Gfx inside_castle_seg7_dl_07043988[] = {
     gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, inside_castle_seg7_texture_07010800),
     gsDPLoadSync(),
@@ -291,7 +291,7 @@ static const Gfx inside_castle_seg7_dl_07043AD8[] = {
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 64 * 32 - 1, CALC_DXT(64, G_IM_SIZ_16b_BYTES)),
     gsSPVertex(inside_castle_seg7_vertex_07043748, 4, 0),
-    gsSP2Triangles( 0,  1,  2, 0x0,  0,  2,  3, 0x0),
+    //gsSP2Triangles( 0,  1,  2, 0x0,  0,  2,  3, 0x0),
     gsSPEndDisplayList(),
 };
 
@@ -301,9 +301,9 @@ static const Gfx inside_castle_seg7_dl_07043B10[] = {
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 64 * 32 - 1, CALC_DXT(64, G_IM_SIZ_16b_BYTES)),
     gsSPVertex(inside_castle_seg7_vertex_07043788, 4, 0),
-    gsSP2Triangles( 0,  1,  2, 0x0,  0,  2,  3, 0x0),
+    //gsSP2Triangles( 0,  1,  2, 0x0,  0,  2,  3, 0x0),
     gsSPEndDisplayList(),
-};
+};*/
 
 // 0x07043B48 - 0x07043C38
 const Gfx inside_castle_seg7_dl_07043B48[] = {
@@ -321,7 +321,7 @@ const Gfx inside_castle_seg7_dl_07043B48[] = {
     gsDPSetTileSize(0, 0, 0, (32 - 1) << G_TEXTURE_IMAGE_FRAC, (64 - 1) << G_TEXTURE_IMAGE_FRAC),
     gsSPDisplayList(inside_castle_seg7_dl_07043820),
     gsSPDisplayList(inside_castle_seg7_dl_07043930),
-    gsDPTileSync(),
+    /*gsDPTileSync(),
     gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, G_TX_RENDERTILE, 0, G_TX_CLAMP, 5, G_TX_NOLOD, G_TX_CLAMP, 6, G_TX_NOLOD),
     gsDPSetTileSize(0, 0, 0, (64 - 1) << G_TEXTURE_IMAGE_FRAC, (32 - 1) << G_TEXTURE_IMAGE_FRAC),
     gsSPDisplayList(inside_castle_seg7_dl_07043988),
@@ -332,7 +332,7 @@ const Gfx inside_castle_seg7_dl_07043B48[] = {
     gsSPDisplayList(inside_castle_seg7_dl_07043AA0),
     gsSPDisplayList(inside_castle_seg7_dl_07043AD8),
     gsSPDisplayList(inside_castle_seg7_dl_07043B10),
-    gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_OFF),
+    gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_OFF),*/
     gsDPPipeSync(),
     gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
     gsSPSetGeometryMode(G_SHADING_SMOOTH),
