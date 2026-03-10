@@ -42,7 +42,6 @@ jobs:
       run: |
         FILES=(
           "${{github.event.repository.name}}-${{github.ref_name}}.bps"
-          "${{github.event.repository.name}}-${{github.ref_name}}-hle.bps"
         )
         
         THRESHOLD=1024 # 1KB
@@ -79,6 +78,5 @@ jobs:
             ${{github.event.head_commit.message}}
         files: |
           ${{github.event.repository.name}}-${{github.ref_name}}.bps
-          ${{github.event.repository.name}}-${{github.ref_name}}-hle.bps
         clear_attachments: false
         prerelease: true
